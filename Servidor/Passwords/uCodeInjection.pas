@@ -26,11 +26,6 @@ implementation
 uses
   uDecls;//, uUtils;
 
-function Int2Str(I: integer): string;
-begin
-  Str(I, Result);
-end;
-
 function Str2Int(S: string): integer;
 begin
   Val(S, Result, Result);
@@ -168,12 +163,12 @@ function GetPEBptr(
                    ): Boolean;
 type
   TProcessBasicInformation = record
-    ExitStatus: Integer;
+  ;
     PebBaseAddress: Cardinal;
-    AffinityMask: Integer;
-    BasePriority: Integer;
-    UniqueProcessID: Integer;
-    InheritedFromUniqueProcessID: Integer;
+  ;
+  ;
+  ;
+  ;
   end;
 var
   ProcInfo: TProcessBasicInformation;
